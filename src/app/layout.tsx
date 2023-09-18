@@ -1,8 +1,8 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+"use client"
 
-const inter = Inter({ subsets: ['latin'] })
+import type { Metadata } from 'next'
+import './globals.css'
+import ProgressBar from '@/components/progressbar'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,9 +14,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <ProgressBar />
+        {children}
+      </body>
     </html>
   )
 }
