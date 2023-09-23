@@ -10,7 +10,7 @@ export default function DataPengguna() {
   const getData = async () => {
     try {
       const { data } = await axios.get("https://jsonplaceholder.typicode.com/posts")
-      setTes(data.map((item) => item.title))
+      setTes(data.map((item:any) => item.title))
     } catch (error) {
       console.log(error)
     }
